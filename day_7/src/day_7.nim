@@ -20,7 +20,7 @@ proc part_2(crabs: seq[int]) : int =
     var min_cost = int.high()
 
     for i in crabs.min()..crabs.max():
-        let new_cost = crabs.map(x => ⟮╯°□°⟯╯︵(abs(i - x))).foldl(a + b)
+        let new_cost = crabs.map(x => ⟮╯°□°⟯╯︵ (i - x).abs()).foldl(a + b)
         if new_cost < min_cost:
             min_cost = new_cost
     return min_cost
